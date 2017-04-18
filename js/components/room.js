@@ -17,7 +17,6 @@ Vue.component( 'room', {
 
 	created() {
 		ds.users.subscribe( this._setRemoteUsers.bind( this ), true );
-		ds.client.on( 'disconnect', this._removeConnection.bind( this ) );
 	},
 
 	methods: {
